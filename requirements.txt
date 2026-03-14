@@ -1,0 +1,4 @@
+ollama
+hnswlib
+sentence-transformers
+json-repair
