@@ -461,8 +461,21 @@ class Corundum:
             if p.exists() and p.is_file():
                 try:
                     target = p.read_text(encoding="utf-8")
-                except Exception:
-                    pass
+                except UnicodeDecodeError:
+                    try:
+                        target = p.read_text(encoding="cp949")
+                    except Exception as e:
+                        return f"파일 읽기 실패 (인코딩 오류): {e}"
+                except PermissionError as e:
+                    return f"파일 읽기 실패 (권한 없음): {e}"
+                except Exception as e:
+                    return f"파일 읽기 실패: {e}"
+            elif p.exists() and p.is_dir():
+                return f"디렉토리는 리뷰할 수 없어요: {target}"
+            elif "/" in target or "\\" in target:
+                # 경로처럼 보이는데 파일이 없는 경우
+                return f"파일을 찾을 수 없어요: {target}"
+            # 경로가 아니면 코드 문자열로 그대로 리뷰
             return await self.logic.review(target, ctx=self.metrics.snapshot())
 
         elif c == "/edit":
