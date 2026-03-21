@@ -143,4 +143,4 @@ MIT
 
 ---
 
-> Making the most meticulous — and most expensive (reality!) — one yet. veryvery ambitious project by K-high schooler. If something's broken, fix it yourself with Claude, but still MIT.
+> Making the most meticulous — and most expensive (really!) — one yet. veryvery ambitious project by K-high schooler. If something's broken, fix it yourself with Claude, but still MIT.
