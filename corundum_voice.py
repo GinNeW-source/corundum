@@ -31,7 +31,7 @@ except ImportError:
 try:
     import sounddevice as sd
     SD_OK = True
-except ImportError:
+except (ImportError, OSError):
     SD_OK = False
     log.warning("[Voice] sounddevice 없음 — 음성 비활성화")
 
