@@ -966,7 +966,7 @@ class CorundumAgency:
                 self._notify_done(task)
                 return
 
-                goal_with_context = task.description
+            goal_with_context = task.description
             if web_context:
                 goal_with_context = f"{task.description}\n\n참고:\n{web_context[:500]}"
 
