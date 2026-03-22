@@ -64,7 +64,7 @@ ollama pull solar:10.7b      # rapid judgment, intent analysis
 ### Installation
 
 ```bash
-git clone https://github.com/hyeoggyusong371-source/corundum.git
+git clone https://github.com/GinNeW-source/corundum.git
 cd corundum
 pip install -r requirements.txt
 python corundum_main.py
