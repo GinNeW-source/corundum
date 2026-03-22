@@ -1,4 +1,4 @@
-# CORUNDUM (코런덤)
+# CORUNDUM
 
 > **"Calm on the surface, razor-sharp within."**  
 > Autonomous Code Defense & Architectural Analysis Engine
